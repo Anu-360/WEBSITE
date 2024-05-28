@@ -1,0 +1,132 @@
+:root {
+    --clr-primary: #651fff;
+    --clr-gray: #37474f;
+    --clr-gray-light: #b0bec5;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 2rem;
+   
+  }
+  
+  .wrapper-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-content:space-between;
+    position: relative;
+    perspective: 900px;
+  }
+  
+  .container {
+  overflow: hidden;
+  background-color:antiquewhite;
+  text-align: center;
+  border-radius: 1rem;
+  position:relative;
+  width: 280px;
+  height: 350px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  align-content: space-between;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+ 
+  
+
+.container:hover {
+    box-shadow: 5px 5px;
+    border:2px solid black;
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.8s;
+  
+  
+}
+
+.front,.back {
+   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 1s;
+
+}
+.container:hover .back {
+  transform: rotateY(0deg);
+}
+.container:hover .front{
+  transform: rotateY(180deg);
+}
+
+.banner{
+  position: absolute;
+  background-image:url("https://wallpapercave.com/wp/wp2592713.jpg");
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.profile {
+width: 8rem;
+clip-path: circle(70px at center);
+margin-top: 4.5rem;
+}
+.back{
+      
+    position:absolute;
+    top:5%;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-size: 90%;
+    border-radius: 20px;
+    color:black;
+    background-color:whitesmoke;
+   
+  
+  }
+  .back h2{
+    transform: rotateY(180deg);
+    position:absolute;
+    top:10%;
+    text-align:center;
+    left: 70px;
+   
+  }
+  .front{
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5);
+    transition: all 2s;
+  }
+
+  
+
+  
+  .name {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+ 
+  
+  .description {
+    margin: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    padding: 1rem;
+    background-color:yellow;
+   
+  }
+
+ 
